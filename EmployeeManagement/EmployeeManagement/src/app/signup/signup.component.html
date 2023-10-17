@@ -1,0 +1,35 @@
+<div class="col-md-6 offset-md-3" style="color: white;">
+    <h3 class="text-center" style="font-size:xx-large; text-transform:uppercase">Signup</h3>
+    <form #sign="ngForm">
+    <div class="form-group">
+        <label class="label" for="firstname">First Name</label>
+        <input type="text" class="form-control" name="firstname" [(ngModel)]="signup.firstname" #fname="ngModel"
+            required [pattern]="namePattern">
+        <div style="color: rgb(255, 0, 0);" *ngIf="fname.hasError('pattern')">Enter Valid Name...</div>
+    </div>
+    <div class="form-group">
+        <label class="label" for="lastname">Last Name</label>
+        <input type="text" class="form-control" name="lastname" [(ngModel)]="signup.lastname" #lname="ngModel" required
+            [pattern]="namePattern">
+        <div style="color: rgb(255, 0, 0);" *ngIf="lname.hasError('pattern')">Enter Valid Name...</div>
+    </div>
+    <div class="form-group">
+        <label class="label" for="emailId">Email Id</label>
+        <input type="text" #email="ngModel" class="form-control" name="emailId" [(ngModel)]="signup.email" required
+            [pattern]="emailPattern">
+        <div style="color: rgb(255, 0, 0);" *ngIf="email.hasError('pattern')">Enter Valid Email...</div>
+    </div>
+    <div class="form-group">
+        <label class="label" for="password">Password</label>
+        <input type="password" #pass="ngModel" class="form-control pwd" name="password" [(ngModel)]="signup.password"
+            required>
+        <!-- <div style="color: rgb(255, 0, 0);" *ngIf="pass.hasError('pattern')">Enter valid password...</div> -->
+    </div>
+    <div class="form-group">
+        <button [hidden]="sign.invalid" (click)="onSignup()" type="button" class="btn btn-primary" style="width: 100%;">Register</button>
+    </div>
+    <div class="form-group">
+        <p class="text-center">Already Have An Account? <a routerLink="/login">Signin</a></p>
+    </div>
+</form>
+</div>

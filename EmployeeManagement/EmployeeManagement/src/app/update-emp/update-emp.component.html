@@ -1,0 +1,23 @@
+<div class="col-md-6 offset-md-3" style="color: white;">
+    <h1 class="text-center" style="font-size: xx-large; text-transform:uppercase">Update Employee</h1>
+    <form #form="ngForm">
+        <div class="form-group">
+            <label class="label" for="firstname">First Name</label>
+            <input type="text" class="form-control" name="firstname" [(ngModel)]="employee.firstname" required [pattern]="namePattern" #fname="ngModel">
+            <div style="color: red;" *ngIf="fname.hasError('pattern')">Use hyphen or underscore insted space..</div>
+        </div>
+        <div class="form-group">
+            <label class="label" for="firstname">Last Name</label>
+            <input type="text" class="form-control" name="lastname" [(ngModel)]="employee.lastname" required [pattern]="namePattern" #lname="ngModel" >
+            <div style="color: red;" *ngIf="lname.hasError('pattern')">Use hyphen or underscore insted space..</div>
+        </div>
+        <div class="form-group">
+            <label class="label" for="emailId">Email Id</label>
+            <input type="text" class="form-control" name="emailId" [(ngModel)]="employee.email" required [pattern]="emailPattern" #email="ngModel">
+            <div style="color: red;" *ngIf="email.hasError('pattern')">Enter valid email address...</div>
+        </div>
+        <div class="form-group">
+            <button   (click)="onSubmit()" class="btn btn-primary form-control">Update</button>
+        </div>
+    </form>
+</div>

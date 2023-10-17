@@ -1,0 +1,29 @@
+<div class="col-md-6 offset-md-3" style="color: white;">
+    <h3 class="text-center" style="font-size:xx-large; text-transform:uppercase">Add Employee</h3>
+    <form #form="ngForm" >
+        <div class="form-group">
+            <label class="label" for="firstname">First Name</label>
+            <input type="text" class="form-control" name="firstname" [(ngModel)]="employee.firstname" #fname="ngModel" required [pattern]="namePattern">
+            <div style="color: rgb(255, 0, 0);" *ngIf="fname.hasError('pattern')">Enter Valid Name...</div>
+        </div>
+        <div class="form-group">
+            <label class="label" for="lastname">Last Name</label>
+            <input type="text" class="form-control" name="lastname" [(ngModel)]="employee.lastname" #lname="ngModel" required [pattern]="namePattern">
+            <div style="color: rgb(255, 0, 0);" *ngIf="lname.hasError('pattern')">Enter Valid Name...</div>
+        </div>
+        <div class="form-group">
+            <label class="label" for="emailId">Email Id</label>
+            <input type="text" #email="ngModel" class="form-control" name="emailId" [(ngModel)]="employee.email" required [pattern]="emailPattern">
+            <div style="color: rgb(255, 0, 0);" *ngIf="email.hasError('pattern')">Enter Valid Email...</div>
+        </div>
+        
+       
+        <div class="form-group">
+            <label class="label" for="phone">Phone</label>
+            <input type="text" class="form-control" name="phone" [(ngModel)]="employee.phone" #phone="ngModel"  required >
+        </div>
+        <div class="form-group">
+            <button [hidden]="form.invalid" (click)="onSubmit()" class="btn btn-primary form-control">Submit</button>
+        </div>
+    </form>
+</div>

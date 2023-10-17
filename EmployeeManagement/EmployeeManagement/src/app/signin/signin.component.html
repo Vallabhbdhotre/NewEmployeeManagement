@@ -1,0 +1,22 @@
+<div class="col-md-6 offset-md-3" style="color: white;">
+    <h3 class="text-center" style="font-size:xx-large; text-transform:uppercase">Login</h3>
+    <form #login="ngForm">
+    <div class="form-group">
+        <label class="label" for="emailId">Email Id</label>
+        <input type="text" #email="ngModel" class="form-control" name="emailId" [(ngModel)]="logindata.email" required [pattern]="emailPattern">
+        <div style="color: rgb(255, 0, 0);" *ngIf="email.hasError('pattern')">Enter Valid Email...</div>
+    </div>
+    <div class="form-group">
+        <label class="label" for="password">Password</label>
+        <input type="password" #pass="ngModel" class="form-control pwd" name="password" [(ngModel)]="logindata.password" required >
+        <!-- <div style="color: rgb(255, 0, 0);" *ngIf="pass.hasError('pattern')">Enter valid password...</div> -->
+    </div>
+    <div class="form-group">
+        <button [disabled]="login.invalid" (click)="onlogin()" type="button" class="btn btn-primary"style="width:100%">Login</button>
+    </div>
+    <div class="form-group">
+        <p class="text-center">Don't Have An Account? <a routerLink="/register">Signup</a></p>
+    </div>
+</form>
+</div>
+

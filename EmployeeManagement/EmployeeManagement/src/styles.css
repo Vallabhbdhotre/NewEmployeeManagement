@@ -1,0 +1,180 @@
+/* You can add global styles to this file, and also import other style files */
+.navbar {
+    border-radius: 10px;
+    margin: 0 5px 10px 5px;
+    overflow: hidden;
+    height: 60px;
+}
+
+.nav-item {
+    margin: 5px;
+    padding: 3px;
+}
+
+.nav-item a {
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.nav-item a:hover {
+    background-color: rgb(82, 152, 233);
+}
+
+.form-group {
+    margin: 10px;
+}
+
+.label {
+    /* text-transform: uppercase; */
+    font-weight: 500;
+}
+
+.btn:nth-child(1) {
+    color: white;
+}
+
+.btn:nth-child(1):hover {
+    background-color: rgb(0, 183, 255);
+}
+
+.btn:nth-child(2):hover {
+    background-color: red;
+}
+
+.btn:nth-child(3):hover {
+    background-color: rgb(0, 4, 255);
+}
+
+
+html,
+body {
+    height: 100%;
+    background: url('./assets/loginback.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+input[type="text"],input[type="password"]{
+    font-weight: bold;
+    color: white;
+    background-color: rgb(235, 231, 231, 0.4);
+}
+
+/* input[type="text"]:hover{
+    background-color: rgb(235, 231, 231 ,0.4);
+} */
+.head {
+    text-align: center;
+    transition: all 0.2s linear;
+}
+
+.card {
+    display: inline-block;
+    padding: 5px;
+    margin-left: 10px;
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+
+}
+
+.white {
+    /* max-width: 500px; */
+    color: white;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    display: inline-block;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px white;
+}
+
+.white :hover {
+    /* box-shadow: 0 0 5px white; */
+    transform: scale(1.05);
+}
+
+.label {
+    margin-right: 2px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+
+    display: flex;
+    justify-content: center;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+
+}
+
+pagination-controls {
+    color: aqua;
+    font-size: 1rem;
+}
+pagination-controls span{
+    padding: 3px;
+    background-color: none;
+    color:rgb(0, 238, 255);
+}
+.ngx-pagination .current {
+    width: 1rem;
+    margin: 0.8rem;
+  
+    background: none !important;
+    cursor: pointer !important;
+}
+.pagination-next{
+    border: 2px solid white;
+    cursor: pointer !important; 
+    border-radius: 8px !important;
+}
+.pagination-previous{
+    border: 2px solid white; 
+    cursor: pointer !important; 
+    border-radius: 8px !important;
+    /* background-color:rgb(255, 255, 255,0.5); */
+}
+
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.navbar-nav:nth-child(4){
+    float:inline-start;
+}
+.navbar-nav:nth-child(5){
+    float: right;
+}
+.form-group .text-center a{
+    text-transform: uppercase;
+    text-decoration: none;
+}

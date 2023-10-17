@@ -1,0 +1,18 @@
+.table  {
+    width: 60%;
+    margin: auto;
+    background-color:transparent !important;
+    font-family: 'Times New Roman', Times, serif !important;
+    font-size: medium;
+}
+
+.table thead {
+    border: 2px solid black;
+}
+
+.table tbody tr {
+    border: 2px solid black;
+    
+    backdrop-filter:blur(10px) ;
+
+}
