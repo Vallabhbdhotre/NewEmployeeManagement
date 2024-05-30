@@ -5,6 +5,7 @@ It aims to enhance the efficiency of managing employee data, tracking performanc
 Here's a detailed look at its features and functionalities:
 
 Key Features:
+
 **Employee Data Management:**
 
 Centralized repository for storing detailed employee information, including personal details, contact information, job roles, and employment history.
